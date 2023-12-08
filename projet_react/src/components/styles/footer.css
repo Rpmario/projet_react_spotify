@@ -1,0 +1,28 @@
+.footer {
+    background: linear-gradient(to right, rgb(185, 55, 157), rgb(18, 183, 243));
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 0px 15px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+.footerleft {
+    color: white;
+    font-weight: 500;
+}
+
+.footerright {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: medium;
+    font-weight: 700;
+    margin-top: 20px;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footerright:hover {
+    transform: scale(1.1);
+}
