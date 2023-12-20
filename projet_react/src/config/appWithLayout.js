@@ -1,8 +1,10 @@
 import React from 'react';
+import './styles.css';
 import AppRouter from './appRouter';
 import Footer from '../components/Footer';
 import SideBar from '../components/sideBar';
-import './styles.css';
+import Player from '../components/Player';
+
 
 const ResizableColumn = ({ WrappedComponent, props }) => {
   const [leftColumnWidth, setLeftColumnWidth] = React.useState(280);
@@ -22,7 +24,7 @@ const ResizableColumn = ({ WrappedComponent, props }) => {
       <div
         style={{
           cursor: leftColumnWidth <= window.innerWidth * 0.3 - 10 && leftColumnWidth > window.innerWidth * 0.15 ? 'e-resize' : 'auto',
-          height: '100%',
+          // height: '100%',
           padding: '0px',
         }}
         onMouseDown={e => {
@@ -48,7 +50,10 @@ const withLayout = WrappedComponent => {
           <WrappedComponent />
         </div>
       </div>
-      <Footer />
+      <div className='pied'>
+        {/* <Footer /> */}
+        <Player />
+      </div>
     </div>
   );
 };

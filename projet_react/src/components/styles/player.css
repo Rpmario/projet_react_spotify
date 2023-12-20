@@ -1,0 +1,129 @@
+.player-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0vh 1vh;
+    margin: 1vh 0px;
+}
+
+.track-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 65vh;
+}
+
+.titre_artiste {
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    animation: marquee 10s linear infinite alternate;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(9%);
+    }
+    to {
+        transform: translateX(-20%);
+    }
+}
+
+.track-info > img {
+    width: 60px;
+    z-index: 5;
+}
+
+.fa-heart {
+    z-index: 5;
+}
+
+.player-controls1 {
+    padding: 0px 5px;
+}
+
+.player-controls1 > p {
+    margin: 1.5vh;
+}
+
+.player-controls2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    margin-left: 30vh;
+    margin-right: 9vh;
+}
+
+.player-controls2 > input {
+    width: 12vh;
+    height: 0.6vh;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+}
+
+.piste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2;
+}
+
+.piste > span {
+    color: #fff;
+    font-size: x-small;
+}
+
+.piste > input {
+    width: 90vh;
+    height: 0.7vh;
+}
+
+.fa-play, .fa-pause {
+    background-color: #fff;
+    padding: 9px 12px;
+    border-radius: 35px;
+    color: #000;
+}
+
+.microphone,
+.fa-shuffle,
+.fa-backward-step,
+.fa-forward-step,
+.fa-rotate-right,
+.fa-redo,
+.fa-volume-high,
+.fa-volume-xmark,
+.fa-repeat,
+.fa-down-left-and-up-right-to-center,
+.fa-up-right-and-down-left-from-center {
+    color: rgb(135, 130, 130);
+    background-color: #000;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.microphone:hover,
+.fa-shuffle:hover,
+.fa-backward-step:hover,
+.fa-forward-step:hover,
+.fa-volume-high:hover,
+.fa-volume-xmark:hover,
+.fa-repeat:hover,
+.fa-rotate-right:hover,
+.fa-down-left-and-up-right-to-center:hover,
+.fa-up-right-and-down-left-from-center:hover {
+    color: #fff;
+}
+
+.fa-volume-high {
+    width: 3vh;
+}
+
+

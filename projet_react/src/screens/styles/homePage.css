@@ -1,0 +1,108 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+.container{
+    position: relative;
+    height: 83.9vh;
+    overflow-y: scroll;
+    scrollbar-color: rgb(35, 33, 33);
+}
+
+.container::-webkit-scrollbar {
+    width: 11px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+
+.title{
+    background: linear-gradient(0deg, #151414, #2a2929);
+    height: 10vh;
+    padding: 0px 20px;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chevron_d,
+.chevron_g,
+.notification,
+.user_profil{
+    color: #fff;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: #151414;
+    font-size: small;
+}
+
+.chevron_d{
+    margin: 0 5px;
+}
+
+.menu_buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;    
+}
+
+.menu_buttons span button{
+    background: none;
+    border: none;
+    padding: 2px;
+}
+
+.menu_buttons span:first-child{
+    background-color: white;
+    padding: 1px 8px;
+    border-radius: 15px;
+}
+
+.telecharger{
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background-color: black;
+    padding: 3px 8px;
+    border-radius: 15px;
+}
+
+.telecharger button,
+.download{
+    color: #fff;
+}
+
+.menu_buttons span:hover,
+.telecharger:hover,
+.notification:hover,
+.user_profil:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.menu_buttons span button:hover{
+    cursor: pointer;
+}
+
+.notification,
+.user_profil{
+    font-size: 18px;
+}
+
+p, h2 {
+    color: aliceblue;
+}
+
+.blocs{
+    padding: 0 20px;
+}

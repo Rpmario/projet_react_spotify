@@ -1,0 +1,160 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+.container{
+    position: relative;
+    height: 83.9vh;
+    overflow-y: scroll;
+    scrollbar-color: rgb(35, 33, 33);
+}
+
+.container::-webkit-scrollbar {
+    width: 11px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+
+.title{
+    background: linear-gradient(0deg, #151414, #2a2929);
+    height: 10vh;
+    padding: 0px 20px;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chevron_d,
+.chevron_g,
+.notification,
+.user_profil{
+    color: #fff;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: #151414;
+    font-size: small;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu_buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;    
+}
+
+.menu_buttons span button{
+    background: none;
+    border: none;
+    padding: 2px;
+}
+
+.bloc_telecharger{
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background-color: black;
+    padding: 3px 8px;
+    border-radius: 15px;
+}
+
+.bloc_telecharger button,
+.download{
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+.bloc_telecharger:hover,
+.notification:hover,
+.user_profil:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.menu_buttons i button:hover{
+    cursor: pointer;
+}
+
+.notification,
+.user_profil{
+    font-size: 18px;
+}
+
+p, h2 {
+    color: aliceblue;
+}
+
+.blocs{
+    padding: 0 20px;
+}
+
+/* .recherche  */
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-left-color: #09f;
+  
+    animation: spin 1s ease infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .recherche {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 9px;
+    border-radius: 25px;
+    background-color: #363636;
+    width: max-content;
+    border: 1px solid transparent;
+  }
+  
+  .search_icon {
+    color: #fff;
+    font-size: x-large;
+  }
+
+  .recherche input[type=text] {
+    width: 250px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
+  
+  .recherche:hover {
+    border: 1px solid #474646;
+  }
+  
+  .recherche.active {
+    border: 2px solid #fff;
+  }
+  
