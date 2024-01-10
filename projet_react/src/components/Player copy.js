@@ -190,7 +190,7 @@ export const Player = () => {
     return () => {
       sound.unload();
       cancelAnimationFrame(animationFrameId);
-      <SoundList onSongClick={handleSongClick} playlist={playListData} />
+      <SoundList onSongClick={handleSongClick} />
     };
   }, [currentTrackIndex, track]);
 
