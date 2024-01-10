@@ -99,10 +99,19 @@ html, body {
     font-size: 18px;
 }
 
-p, h2 {
+h2, p {
     color: aliceblue;
 }
 
 .blocs{
     padding: 0 20px;
+    position: relative;
+}
+
+.sous_blocs{
+    position: relative;
+    width: 72vw;
+    margin: 0 auto 5px 0;
+    box-sizing: border-box;
+    color: #FF5733;
 }

@@ -1,0 +1,106 @@
+.sound-list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.sound-list::-webkit-scrollbar {
+    width: 11px;
+}
+
+.sound-list::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+  
+  .sound-item {
+    position: relative;
+    border-radius: 8px;
+    margin-right: 15px;
+    padding: 10px;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    flex: 0 0 auto;
+    overflow: hidden;
+    background-color: #272626;
+  }
+
+  .sound-item:hover{
+    background-color: #363434;
+  }
+  
+  .image_back {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    opacity: 0.9;
+    object-fit: cover;
+  }
+
+  .song-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+    
+  }
+  
+  .spotify-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+  }
+
+  .details{
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  .song-album {
+    overflow: hidden;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    font-size: small;
+    margin: 3px 0;
+  }
+  
+  .artist-name, .song-title {
+    margin: 0;
+    color: #888;
+    font-size: x-small;
+  }
+  
+  .play-button {
+    display: none;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 9px;
+    bottom: 18px;
+    z-index: 10;
+  }
+  
+  .sound-item:hover .play-button {
+    display: inline-block;
+  }
+
+  .play-button:hover {
+    background-color: #168f3f;
+  }
+  

@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import { motion, AnimatePresence } from 'framer-motion';
 import AppRouter from './appRouter';
 import Footer from '../components/Footer';
 import SideBar from '../components/sideBar';

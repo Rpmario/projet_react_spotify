@@ -97,16 +97,22 @@
 .fa-backward-step,
 .fa-forward-step,
 .fa-rotate-right,
-.fa-redo,
+.fa-rotate,
 .fa-volume-high,
 .fa-volume-xmark,
 .fa-repeat,
+.fa-repeat-1,
 .fa-down-left-and-up-right-to-center,
 .fa-up-right-and-down-left-from-center {
     color: rgb(135, 130, 130);
     background-color: #000;
     border-radius: 15px;
     padding: 5px;
+}
+
+.fa-rotate,
+.fa-repeat-1{
+    color: green;
 }
 
 .microphone:hover,
@@ -116,7 +122,9 @@
 .fa-volume-high:hover,
 .fa-volume-xmark:hover,
 .fa-repeat:hover,
+.fa-repeat-1:hover,
 .fa-rotate-right:hover,
+.fa-rotate:hover,
 .fa-down-left-and-up-right-to-center:hover,
 .fa-up-right-and-down-left-from-center:hover {
     color: #fff;

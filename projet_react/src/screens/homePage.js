@@ -7,6 +7,9 @@ import { SlUser } from "react-icons/sl";
 import { useNavigate } from 'react-router-dom';
 import { setNavigateRef } from '../config/navigateRef';
 import FooterPages from '../components/FooterPages';
+import SoundList from '../components/SoundList';
+import SoundArtist from '../components/SoundArtist';
+import SoundAlbum from '../components/SoundAlbum';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -32,14 +35,18 @@ const HomePage = () => {
           </span>
         </div>
         <div className='blocs'>
-          <div className='derniers_sons'>
+          <div className='sous_blocs'>
             <h2>Derniers Sons</h2>
+            <SoundList />
+            {/* <SoundArtist /> */}
           </div>
-          <div className='derniers_artistes'>
-            <h2>Derniers Artistes</h2>
+          <div className='sous_blocs'>
+            <h2>Artistes</h2>
+            <SoundArtist />
           </div>
-          <div className='derniers_albums'>
-            <h2>Derniers albums</h2>
+          <div className='sous_blocs'>
+            <h2>Albums</h2>
+            <SoundAlbum />
           </div>
         </div>
         <FooterPages />
