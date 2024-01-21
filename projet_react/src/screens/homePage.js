@@ -10,6 +10,7 @@ import FooterPages from '../components/FooterPages';
 import SoundList from '../components/SoundList';
 import SoundArtist from '../components/SoundArtist';
 import SoundAlbum from '../components/SoundAlbum';
+import EcouteRecent from '../components/EcouteRecent';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -36,9 +37,10 @@ const HomePage = () => {
         </div>
         <div className='blocs'>
           <div className='sous_blocs'>
+            <h2>Ecoutés récemment</h2>
+            <EcouteRecent />
             <h2>Derniers Sons</h2>
             <SoundList />
-            {/* <SoundArtist /> */}
           </div>
           <div className='sous_blocs'>
             <h2>Artistes</h2>

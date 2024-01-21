@@ -1,53 +1,54 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './styles/Sound.css';
-import Player from './Player';
-// import { isPlaying, onPlayPause } from './Player';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
-const SoundList = () => {
+const SoundArtist = () => {
   const [playlist, setPlaylist] = useState([]);
 
   useEffect(() => {
-    const randomSongs = [
-      { album: 'album 1', title: 'Song 1', artist: 'Artist 1', iconColor: '#FF5733' },
-      { album: 'album 2', title: 'Song 2', artist: 'Artist 2', iconColor: '#33FF57' },
-      { album: 'album 3', title: 'Song 3', artist: 'Artist 3', iconColor: '#FF5733' },
-      { album: 'album 4', title: 'Song 4', artist: 'Artist 4', iconColor: '#33FF57' },
-      { album: 'album 5', title: 'Song 5', artist: 'Artist 5', iconColor: '#FF5733' },
-      { album: 'album 6', title: 'Song 6', artist: 'Artist 6', iconColor: '#33FF57' },
-      { album: 'album 7', title: 'Song 7', artist: 'Artist 7', iconColor: '#FF5733' },
-      { album: 'album 8', title: 'Song 8', artist: 'Artist 8', iconColor: '#33FF57' },
-      { album: 'album 9', title: 'Song 9', artist: 'Artist 9', iconColor: '#FF5733' },
-      { album: 'album 10', title: 'Song 10', artist: 'Artist 10', iconColor: '#33FF57' },
-      { album: 'album 11', title: 'Song 11', artist: 'Artist 11', iconColor: '#33FF57' },
-    ];
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://ec2-15-188-52-96.eu-west-3.compute.amazonaws.com/api/artistes/', {
+          params: {
+            type: 'multi',
+            offset: '0',
+            limit: '10',
+            numberOfTopResults: '5',
+          },
+        });
 
-    const selectedSongs = randomSongs.slice(0, 10);
+        setPlaylist(response.data);
+        console.log('Artistes :', response);
+      } catch (error) {
+        console.error('Erreur lors de la requête API:', error);
+      }
+    };
 
-    setPlaylist(selectedSongs);
+    fetchData();
   }, []);
+
 
   return (
     <div className="sound-list">
-      {playlist.map((song, index) => (
+      {playlist.map((artiste, index) => (
         <div className="sound-item" key={index}>
             <div className="song-info">
                 <img
                 className="spotify-icon"
                 src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
                 alt="Spotify Icon"
-                style={{ backgroundColor: song.iconColor }}
+                style={{ backgroundColor: artiste.iconColor }}
                 />
-                <img className='image_back' src='https://tse4.mm.bing.net/th?id=OIP.Xo3IVXhLuqsPCO8d-mZlewHaFj&pid=Api&P=0&h=180' />
-                {/* <div className="play-button"> */}
-                  <FontAwesomeIcon className='play-button' icon={Player.isPlaying ? faPause : faPlay} onClick={Player.onPlayPause} />
-                {/* </div> */}
+                <img 
+                  className='image_back' 
+                  src='https://tse3.explicit.bing.net/th?id=OIP.27iCSOf--ZGhI1OhBENn6AHaGI&pid=Api&P=0&h=180'
+                  alt="Album Cover" 
+                  style={{ backgroundColor: 'green', width: '200%', height: '100%' }}
+                />
+
             </div>
             <div className='details'>
-              <p className="song-album">{song.album}</p>
-              <p className="artist-name">{song.artist}</p>
-              <p className="song-title">{song.title}</p>
+              <p className="song-album">{artiste.name}</p>
             </div>
         </div>
       ))}
@@ -55,4 +56,4 @@ const SoundList = () => {
   );
 };
 
-export default SoundList;
+export default SoundArtist;

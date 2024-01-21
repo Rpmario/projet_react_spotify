@@ -1,9 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './styles/Sound.css';
+import Player from './Player';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 const SoundList = () => {
   const [playlist, setPlaylist] = useState([]);
+  const [soundUrl, setSoundUrl] = useState('');
+
+  const definedUrl = (url) => {
+    setSoundUrl(url);
+    saveToLocalStorage(url);
+  };
+
+  const saveToLocalStorage = (url, title, albumName) => {
+    const storedSongs = JSON.parse(localStorage.getItem('storedSongs')) || [];
+    storedSongs.push({ url, title, albumName });
+    localStorage.setItem('storedSongs', JSON.stringify(storedSongs));
+  };
 
   const fetchAlbumDetails = async (albumId) => {
     try {
@@ -55,20 +70,23 @@ const SoundList = () => {
               alt="Spotify Icon"
               style={{ backgroundColor: '#FF5733' }}
             />
-            <img className='image_back' src={song.imageUrl} alt="Album Cover" />
-            <button className="play-button">Play</button>
+            <img 
+              className='image_back' 
+              src='https://tse2.mm.bing.net/th?id=OIP.QbViIG0LQjtGeNTA2pRZBQAAAA&pid=Api&P=0&h=180'
+              alt="Album Cover" 
+            />
+            <FontAwesomeIcon className='play-button' icon={faPlay} onClick={() => definedUrl(song.urlAudio, song.title, song.albumName)} />
           </div>
           <div className='details'>
-            <p className="song-album">{song.albumName}</p>
-            <p className="artist-name">{song.artistName}</p>
-          </div>
-          <div className='data_response'>
-            <p><strong>Artiste:</strong> {song.artist}</p>
-            <p><strong>URL de l'audio:</strong> <a href={song.urlAudio} target="_blank" rel="noopener noreferrer">{song.urlAudio}</a></p>
-            <p><strong>Album:</strong> {song.albumName}</p>
+            {/* <p className="song-album">{song.albumName}</p> */}
+            <p className="song-album">{song.title}</p>
+            {/* <p className="artist-name">{song.artist}</p> */}
           </div>
         </div>
       ))}
+      <div className='lecteur'>
+        <Player soundUrl={soundUrl} />
+      </div>
     </div>
   );
 };

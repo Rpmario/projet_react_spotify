@@ -26,6 +26,7 @@ import image from '../assets/images/image.jpeg';
 const playListData = [song1, song2, song3, song4];
 
 const PlayerControls1 = ({
+  soundUrl,
   isPlaying,
   onRandom,
   onSkipBackward,
@@ -119,7 +120,7 @@ const PlayerControls2 = ({ isMuted, onMute, onVolumeChange, onVolumeClick, volum
   </div>
 );
 
-export const Player = () => {
+export const Player = ({soundUrl}) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [playList, setPlayList] = useState(playListData);
@@ -149,7 +150,7 @@ export const Player = () => {
 
   useEffect(() => {
     const sound = new Howl({
-      src: [track],
+      src: [soundUrl],
       volume: isMuted ? 0 : volume,
       onload: () => {
         if (isPlaying) {
@@ -184,7 +185,7 @@ export const Player = () => {
       sound.unload();
       cancelAnimationFrame(animationFrameId);
     };
-  }, [currentTrackIndex, track]);
+  }, [currentTrackIndex, track, soundUrl]);
 
   const animateProgress = () => {
     const update = () => {

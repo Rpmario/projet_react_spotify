@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles.css';
-import { motion, AnimatePresence } from 'framer-motion';
 import AppRouter from './appRouter';
 import Footer from '../components/Footer';
 import SideBar from '../components/sideBar';
@@ -53,7 +52,7 @@ const withLayout = WrappedComponent => {
       </div>
       <div className='pied'>
         {/* <Footer /> */}
-        <Player />
+        {/* <Player /> */}
       </div>
     </div>
   );
