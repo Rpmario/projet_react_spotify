@@ -31,11 +31,10 @@ Back : http://ec2-15-188-52-96.eu-west-3.compute.amazonaws.com/api/
 
 ### Liens Vidéo Demande Spécifique
 
-Demande 1 : 
+Demande 1 : Playlist (récemment écoutés) https://youtu.be/EEYk1LR08Vk
 
-Demande 2 :
+Demande 2 : Recherche https://youtu.be/ai8jMUPTXZo
 
-Demande 3 :
 
 
 SOUHAITEZ-VOUS UNE ANALYSE ET DES RETOURS CONCRETS SUR VOTRE CODE ?

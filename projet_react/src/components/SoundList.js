@@ -79,9 +79,7 @@ const SoundList = () => {
             <FontAwesomeIcon className='play-button' icon={faPlay} onClick={() => definedUrl(song.urlAudio, song.title, song.albumName)} />
           </div>
           <div className='details'>
-            {/* <p className="song-album">{song.albumName}</p> */}
             <p className="song-album">{song.title}</p>
-            {/* <p className="artist-name">{song.artist}</p> */}
           </div>
         </div>
       ))}
