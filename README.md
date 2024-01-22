@@ -5,25 +5,25 @@ Partie front du projet spotify
 MBABOU Romario Ulrich
 Cheong David
 KUETE Charlot Junior
-
 Liens GITHUB pour le rendu :
-
 BackOffice : https://github.com/charlotkuete11/spotify-office
+
 Front : https://github.com/Rpmario/projet_react_spotify
+
 Back : https://github.com/dmcheong/SpotifyAPI
 
-Mise en Prod
-Lien de nos projets mis en prod :
+Mise en Prod:
 
+Lien de nos projets mis en prod :
 BackOffice :
+
 Front : https://spotify-rio.ubora-studios.com/
-Back :
+
+Back : http://ec2-15-188-52-96.eu-west-3.compute.amazonaws.com/api/
 
 Liens Vidéo Demande Spécifique
+Demande 1 : Playlist (récemment écoutés) https://youtu.be/EEYk1LR08Vk
 
-Demande 1 : 
-Demande 2 :
-Demande 3 :
+Demande 2 : Recherche https://youtu.be/ai8jMUPTXZo
 
-SOUHAITEZ-VOUS UNE ANALYSE ET DES RETOURS CONCRETS SUR VOTRE CODE ?
-Oui, s'il vous plait Best prof.
+SOUHAITEZ-VOUS UNE ANALYSE ET DES RETOURS CONCRETS SUR VOTRE CODE ? Oui, s'il vous plait Best prof.
