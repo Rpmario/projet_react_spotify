@@ -3,7 +3,7 @@ import './styles/sideBar.css';
 import { navigateRef } from '../config/navigateRef';
 import logo from '../assets/images/Spotify_Logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faHome, faGlobe, faBookBookmark, faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faHome, faGlobe, faBookBookmark } from '@fortawesome/free-solid-svg-icons';
 
 
 

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './styles/Sound.css';
+import './styles/details.css';
 
 const SoundAlbum = () => {
   const [playlist, setPlaylist] = useState([]);
+  const [selectedAlbum, setSelectedAlbum] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +20,6 @@ const SoundAlbum = () => {
         });
 
         setPlaylist(response.data);
-        console.log('Albums :', response);
       } catch (error) {
         console.error('Erreur lors de la requête API:', error);
       }
@@ -27,31 +28,46 @@ const SoundAlbum = () => {
     fetchData();
   }, []);
 
+  const handleAlbumClick = (album) => {
+    setSelectedAlbum(album);
+  };
 
   return (
-    <div className="sound-list">
-      {playlist.map((album, index) => (
-        <div className="sound-item" key={index}>
+    <div className="sound-container">
+      <div className="sound-list">
+        {playlist.map((album, index) => (
+          <div className="sound-item" key={index} onClick={() => handleAlbumClick(album)}>
             <div className="song-info">
-                <img
+              <img
                 className="spotify-icon"
                 src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
                 alt="Spotify Icon"
                 style={{ backgroundColor: album.iconColor }}
-                />
-                <img 
-                  className='image_back' 
-                  // src={`http://ec2-15-188-52-96.eu-west-3.compute.amazonaws.com${album.cover_url}`} 
-                  src='https://tse1.mm.bing.net/th?id=OIP.PUqzkyjtg3G5Gg3Tw0E1QQHaE8&pid=Api&P=0&h=180'
-                  alt="Album Cover" 
-                />
-
+              />
+              <img
+                className='image_back'
+                src='https://tse1.mm.bing.net/th?id=OIP.PUqzkyjtg3G5Gg3Tw0E1QQHaE8&pid=Api&P=0&h=180'
+                alt="Album Cover"
+              />
             </div>
             <div className='details'>
               <p className="song-album">{album.title}</p>
             </div>
+          </div>
+        ))}
+      </div>
+      {selectedAlbum && (
+        <div className="audio-cards">
+          <h2>{selectedAlbum.title}</h2>
+          <div className="audio-list">
+            {selectedAlbum.audios.map((audio, index) => (
+              <div className="audio-card" key={index}>
+                <p>{audio}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
+      )}
     </div>
   );
 };

@@ -3,7 +3,8 @@ import axios from 'axios';
 import './styles/Sound.css';
 import Player from './Player';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+
 
 const SoundList = () => {
   const [playlist, setPlaylist] = useState([]);

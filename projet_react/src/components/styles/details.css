@@ -1,0 +1,46 @@
+/* .sound-container {
+    display: flex;
+  } */
+  
+  /* .sound-list {
+    display: flex;
+    flex-wrap: wrap;
+  } */
+  
+  /* .sound-item {
+    cursor: pointer;
+    margin: 10px;
+  } */
+  
+  /* .spotify-icon {
+    width: 50px;
+    height: 50px;
+  } */
+  
+  /* .image_back {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  } */
+  
+  /* .details {
+    text-align: center;
+  } */
+  
+  .audio-cards {
+    margin-left: 20px;
+  }
+  
+  .audio-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .audio-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
+    text-align: left;
+  }
+  

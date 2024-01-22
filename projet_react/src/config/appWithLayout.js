@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.css';
 import AppRouter from './appRouter';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import SideBar from '../components/sideBar';
-import Player from '../components/Player';
+// import Player from '../components/Player';
 
 
 const ResizableColumn = ({ WrappedComponent, props }) => {

@@ -44,9 +44,9 @@ const PlayerControls1 = ({
 }) => {
   const [isDragging, setIsDragging] = useState(false);
 
-  const handleVolumeClick = (event) => {
-    updateVolume(event);
-  };
+  // const handleVolumeClick = (event) => {
+  //   updateVolume(event);
+  // };
 
   const handleVolumeDragStart = () => {
     setIsDragging(true);
@@ -277,7 +277,7 @@ export const Player = ({soundUrl}) => {
   return (
     <div className={`player-container ${isFullScreen ? 'fullscreen-mode' : ''}`}>
       <div className="track-info">
-        <img src={image} alt="Image" />
+        <img src={image} alt="Imagee" />
         <p className="titre_artiste">Titre de la musique - Nom artiste test longueu</p>
         <Like />
       </div>
