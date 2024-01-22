@@ -26,7 +26,7 @@ BackOffice :
 
 Front : https://spotify-rio.ubora-studios.com/
 
-Back :
+Back : http://ec2-15-188-52-96.eu-west-3.compute.amazonaws.com/api/
 
 
 ### Liens Vidéo Demande Spécifique
